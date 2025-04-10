@@ -174,8 +174,11 @@ jumpcount: .word 0
 playerstate: .word 0   			# 0: Standing state, 1: Jumping state, 2: Falling state
 jumpframes: .word 0
 dronelocation: .word 0x10008000
-rollerlocation: .word 0x10009D8C
-originalrollerlocation: .word 0x10009D8C
+rollerlocation: .word 0x100095FC
+originalrollerlocation: .word 0x100095FC
+rollerdirection: .word 0
+rollercount: .word 0
+rollerframecount: .word 0
 shooterlocation1: .word 0x1000B4D4
 shooterlocation2: .word 0x10008DDC
 locbullet1: .word 0x1000B8D4
@@ -184,6 +187,7 @@ locbullet2: .word 0x100091DC
 locoriginalbullet2: .word 0x100091DC
 bulletcolour: .word 0xFF7E00
 shootercolour: .word 0x4A0741
+rollercolour: .word 0x7F9E94
 
 
 .text
@@ -242,13 +246,66 @@ respawn:
 	jal reset_bullet1
 	jal reset_bullet2
 	# Decrement health
+	
 	j make_level
     	
 update_enemy_state:
 	jal draw_shooter1
 	jal draw_shooter2
 	
+	jal move_roller
+	
 	j update_bullet_state
+	
+	
+move_roller:
+    	lw   $t1, rollerframecount  	# Load frame count since it was moving too fast without it
+    	addi $t1, $t1, 1                # Increment the frame counter
+    	sw   $t1, rollerframecount  	
+    	bne  $t1, 2, roller_end 	# If counter is not 2 then we skip this frame otherwise we can reset it and continue
+
+    	sw   $zero, rollerframecount  	# Reset counter to 0
+    	
+    	lw $t0, rollerdirection 	# Check direction to move in
+    	beqz $t0, roller_right
+    	bnez $t0, roller_left
+    	
+	roller_left:
+		jal erase_roller      	# Erase current sprite by re-drawing the level background
+    		lw $t7, rollerlocation
+    		addi $t7, $t7, -4     	# Move left by 1 pixel (4 bytes)
+    		sw $t7, rollerlocation
+    		jal draw_roller
+    		
+    		lw $t7, rollercount
+    		addi $t7, $t7, 1     	# Incerement roller count
+    		sw $t7, rollercount
+    		
+		bne $t7, 14, roller_end	# If we have not done 14 moves then we can end
+		
+    		sw $zero, rollercount
+    		sw $zero, rollerdirection # Change roller direction to 0 for right since it did 14 moves
+    		
+	roller_right:
+		jal erase_roller      	# Erase current sprite by re-drawing the level background
+    		lw $t7, rollerlocation
+    		addi $t7, $t7, 4     	# Move right by 1 pixel (4 bytes)
+    		sw $t7, rollerlocation
+    		jal draw_roller
+    		
+    		lw $t7, rollercount
+    		addi $t7, $t7, 1     	# Incerement roller count
+    		sw $t7, rollercount
+    		
+		bne $t7, 14, roller_end
+		
+    		sw $zero, rollercount
+    		
+    		addi $t0, $t0, 1
+    		sw $t0, rollerdirection # Change roller direction to 1 for left since it did 14 moves
+    		
+	roller_end:
+		j update_bullet_state
 
 update_bullet_state:
 	j bullet_left
@@ -588,6 +645,11 @@ draw_shooter2:
 	la $s7, shooter_sprite
 	j draw_entity
 	
+draw_roller:
+	lw $s6, rollerlocation
+	la $s7, roller_sprite
+	j draw_entity
+	
 draw_player:
 	lw $s6, curplayerlocation
 	la $s7, player_sprite
@@ -635,6 +697,9 @@ erase_shooter2:
 	lw $s6, shooterlocation2
 	j erase_entity
 	
+erase_roller:
+	lw $s6, rollerlocation
+	j erase_entity
 erase_player:
 	lw $s6, curplayerlocation
 	j erase_entity
@@ -849,6 +914,7 @@ update_collisions:
 	
 	lw $t4, bulletcolour
 	lw $t6, shootercolour
+	lw $t7, rollercolour
 	
 	li $s1, 8 			# Rows
 	update_row:
@@ -861,6 +927,7 @@ update_collisions:
 					# Comparisons
 		beq $t9, $t4, respawn	# Hit by bullet or falls in lava
 		beq $t9, $t6, respawn	# Touches the shooting enemy
+		beq $t9, $t7, respawn
 		
 		addi $t0, $t0, 4 	# Increment the location pixel
 		
