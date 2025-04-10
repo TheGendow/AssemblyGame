@@ -103,8 +103,8 @@ level:
            0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x464646, 0x4D4D4D, 0x4D4D4D, 0x4D4D4D, 0x4D4D4D, 0x4D4D4D, 0x464646, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x5E5D5E, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x2B2B2B,
            0x2B2B2B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x464646, 0x4D4D4D, 0x4D4D4D, 0x4D4D4D, 0x4D4D4D, 0x4D4D4D, 0x464646, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x5E5D5E, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B,
            0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x5E5D5E, 0x6B6B6B, 0x6B6B6B, 0x5E5D5E, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x2B2B2B, 0x2B2B2B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x5E5D5E, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x464646, 0x4D4D4D, 0x4D4D4D, 0x4D4D4D, 0x4D4D4D, 0x4D4D4D, 0x464646, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B,
-           0x5E5D5E, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x2B2B2B, 0x2B2B2B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x5E5D5E, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x464646, 0x4D4D4D, 0x4D4D4D, 0x4D4D4D,
-           0x4D4D4D, 0x4D4D4D, 0x464646, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x5E5D5E, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x5E5D5E, 0x6B6B6B, 0x6B6B6B, 0x2B2B2B, 0x2B2B2B, 0x2B2B2B, 0x2B2B2B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B,
+           0x5E5D5E, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x2B2B2B, 0x2B2B2B, 0x2B2B2B, 0x2B2B2B, 0x2B2B2B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x5E5D5E, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x464646, 0x4D4D4D, 0x4D4D4D, 0x4D4D4D,
+           0x4D4D4D, 0x4D4D4D, 0x464646, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x5E5D5E, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x5E5D5E, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x2B2B2B, 0x2B2B2B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B,
            0x5E5D5E, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x464646, 0x4D4D4D, 0x4D4D4D, 0x4D4D4D, 0x4D4D4D, 0x4D4D4D, 0x464646, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x5E5D5E, 0x6B6B6B, 0x5E5D5E, 0x5E5D5E, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B,
            0x5E5D5E, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x2B2B2B, 0x2B2B2B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x464646, 0x2B2B2B, 0x2B2B2B, 0x2B2B2B, 0x2B2B2B, 0x2B2B2B, 0x2B2B2B, 0x2B2B2B, 0x2B2B2B, 0x2B2B2B, 0x2B2B2B, 0x2B2B2B, 0x2B2B2B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x5E5D5E, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B,
            0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x2B2B2B, 0x2B2B2B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x5E5D5E, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x464646, 0x4D4D4D, 0x4D4D4D, 0x4D4D4D, 0x4D4D4D, 0x4D4D4D, 0x464646, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B, 0x6B6B6B,
@@ -130,7 +130,36 @@ player_sprite: # 8 x 8 sprite
            0x000000, 0x000000, 0x000000, 0xC3C3C3, 0xC3C3C3, 0xC3C3C3, 0x000000, 0x000000,
            0x000000, 0x000000, 0x000000, 0xC3C3C3, 0x000000, 0xC3C3C3, 0x000000, 0x000000
            
-
+drone_sprite: # 8 x 8 sprite
+	.word 0x000000, 0x000000, 0x0A1441, 0x0A1441, 0x0A1441, 0x0A1441, 0x000000, 0x000000,
+           0x000000, 0x0A1441, 0x012862, 0x012862, 0x012862, 0x012862, 0x0A1441, 0x000000,
+           0x0A1441, 0x012862, 0x012862, 0x012862, 0x012862, 0x012862, 0x012862, 0x0A1441,
+           0x0A1441, 0x012862, 0x012862, 0x012862, 0x012862, 0x012862, 0x012862, 0x0A1441,
+           0x0A1441, 0x000000, 0x012862, 0x012862, 0x012862, 0x012862, 0x000000, 0x0A1441,
+           0x000000, 0x0A1441, 0x0A1441, 0x0A1441, 0x0A1441, 0x0A1441, 0x0A1441, 0x000000,
+           0x000000, 0x000000, 0x000000, 0x000000, 0x000000, 0x000000, 0x000000, 0x000000,
+           0x000000, 0x000000, 0x000000, 0x000000, 0x000000, 0x000000, 0x000000, 0x000000
+           
+roller_sprite: # 8 x 8 sprite
+	.word 0x000000, 0x000000, 0x000000, 0x000000, 0x000000, 0x000000, 0x000000, 0x000000,
+           0x000000, 0x7F9E94, 0x000000, 0x7F9E94, 0x7F9E94, 0x7F9E94, 0x000000, 0x7F9E94,
+           0x000000, 0x000000, 0x7F9E94, 0x78B5B1, 0x78B5B1, 0x78B5B1, 0x7F9E94, 0x000000,
+           0x000000, 0x7F9E94, 0x78B5B1, 0x7F9E94, 0x78B5B1, 0x7F9E94, 0x78B5B1, 0x7F9E94,
+           0x000000, 0x7F9E94, 0x78B5B1, 0x7F9E94, 0x7F9E94, 0x7F9E94, 0x78B5B1, 0x7F9E94,
+           0x000000, 0x7F9E94, 0x000000, 0x7F9E94, 0x78B5B1, 0x7F9E94, 0x000000, 0x7F9E94,
+           0x000000, 0x000000, 0x7F9E94, 0x78B5B1, 0x78B5B1, 0x78B5B1, 0x7F9E94, 0x000000,
+           0x000000, 0x7F9E94, 0x000000, 0x7F9E94, 0x7F9E94, 0x7F9E94, 0x000000, 0x7F9E94
+           
+shooter_sprite: # 8 x 8 sprite  
+	.word 0x000000, 0x4A0741, 0x000000, 0x000000, 0x000000, 0x000000, 0x000000, 0x4A0741,
+           0x000000, 0x000000, 0x4A0741, 0x4A0741, 0x4A0741, 0x4A0741, 0x4A0741, 0x000000,
+           0x000000, 0x000000, 0x4A0741, 0xBB3131, 0x4A0741, 0xBB3131, 0x4A0741, 0x000000,
+           0x000000, 0x000000, 0x4A0741, 0x4A0741, 0x4A0741, 0x4A0741, 0x4A0741, 0x000000,
+           0x000000, 0x000000, 0x000000, 0x010001, 0x010001, 0x010001, 0x000000, 0x000000,
+           0x000000, 0x000000, 0x4A0741, 0x4A0741, 0x4A0741, 0x4A0741, 0x4A0741, 0x000000,
+           0x000000, 0x000000, 0x000000, 0x4A0741, 0x4A0741, 0x4A0741, 0x000000, 0x000000,
+           0x000000, 0x000000, 0x000000, 0x4A0741, 0x000000, 0x4A0741, 0x000000, 0x000000
+           
 ### GAME DATA
 .eqv BASE_ADDRESS 0x10008000
 .eqv MAX_PIXELS 4096
@@ -144,6 +173,18 @@ collision: .word 0
 jumpcount: .word 0
 playerstate: .word 0   			# 0: Standing state, 1: Jumping state, 2: Falling state
 jumpframes: .word 0
+dronelocation: .word 0x10008000
+rollerlocation: .word 0x10009D8C
+originalrollerlocation: .word 0x10009D8C
+shooterlocation1: .word 0x1000B4D4
+shooterlocation2: .word 0x10008DDC
+locbullet1: .word 0x1000B8D4
+locoriginalbullet1: .word 0x1000B8D4
+locbullet2: .word 0x100091DC
+locoriginalbullet2: .word 0x100091DC
+bulletcolour: .word 0xFF7E00
+shootercolour: .word 0x4A0741
+
 
 .text
 .global main
@@ -190,9 +231,143 @@ game_loop:
 	syscall
 	
 	j update_player_state
+	j update_enemy_state
+	j update_bullet_state
+	j update_collisions
     
     	j game_loop       		# If no valid key pressed, loop
+    	
+respawn:
+	# Set bullet locations 
+	jal reset_bullet1
+	jal reset_bullet2
+	# Decrement health
+	j make_level
+    	
+update_enemy_state:
+	jal draw_shooter1
+	jal draw_shooter2
+	
+	j update_bullet_state
+
+update_bullet_state:
+	j bullet_left
+	j update_collisions
+
+draw_bullet1:
+    lw   $t0, locbullet1  		# Bullet location
+    lw   $t1, bulletcolour              # Bullet colour
+    sw   $t1, 0($t0)                    # Draw left pixel
+    addi $t0, $t0, 4                    
+    sw   $t1, 0($t0)                    # Draw right pixel
+    jr   $ra
    
+erase_bullet1:
+    lw $s0, locbullet1   		# Bullet location
+    li $t1, BASE_ADDRESS           	
+    la $t2, level                       
+    sub $t3, $s0, $t1 			# Curent bullet location - BASE_ADDRESS to find how much they differ by
+    add $t2, $t2, $t3			# Add this difference to the address of the array index for the level
+	
+    lw $t4, 0($t2)                      # Background colour at bullet left pixel
+    sw $t4, 0($s0) 			# Store the pixel to display
+    
+    
+    addi $s0, $s0, 4  			# Position of right pixel on display
+    addi $t2, $t2, 4                    
+    lw $t4, 0($t2)			# Background colour at bullet right pixel
+    sw $t4, 0($s0)			# Store the next pixel to the right to the display
+   
+    jr $ra
+
+draw_bullet2:
+    lw   $t0, locbullet2  		# Bullet location
+    lw   $t1, bulletcolour              # Bullet colour
+    sw   $t1, 0($t0)                    # Draw left pixel
+    addi $t0, $t0, 4                    
+    sw   $t1, 0($t0)                    # Draw right pixel
+    jr   $ra
+   
+erase_bullet2:
+    lw $s0, locbullet2   		# Bullet location
+    li $t1, BASE_ADDRESS           	
+    la $t2, level                       
+    sub $t3, $s0, $t1 			# Curent bullet location - BASE_ADDRESS to find how much they differ by
+    add $t2, $t2, $t3			# Add this difference to the address of the array index for the level
+	
+    lw $t4, 0($t2)                      # Background colour at bullet left pixel
+    sw $t4, 0($s0) 			# Store the pixel to display
+    
+    
+    addi $s0, $s0, 4  			# Position of right pixel on display
+    addi $t2, $t2, 4                    
+    lw $t4, 0($t2)			# Background colour at bullet right pixel
+    sw $t4, 0($s0)			# Store the next pixel to the right to the display
+   
+    jr $ra
+    
+bullet_left:
+	jal erase_bullet1       	# Erase bullet from previous position
+	jal bullet_collision1
+    	lw   $t1, locbullet1   		# Load current bullet location
+    	addi $t1, $t1, -4               # Move left by 1 pixel (4 bytes)
+    	sw   $t1, locbullet1   		# Save updated bullet location
+    	jal draw_bullet1
+    	
+    	jal erase_bullet2       	# Erase bullet from previous position
+	jal bullet_collision2
+    	lw   $t1, locbullet2   		# Load current bullet location
+    	addi $t1, $t1, -4               # Move left by 1 pixel (4 bytes)
+    	sw   $t1, locbullet2   		# Save updated bullet location
+    	jal draw_bullet2
+    	
+    	j update_collisions
+    
+
+    	
+bullet_collision1:
+	lw $t0, locbullet1 		# Bullet location
+	li $s0, BASE_ADDRESS
+	la $t1, level
+	
+	lw $t4, platformcolour
+	
+	addi $t0, $t0, -4		# Location we are checking
+	sub $t2, $t0, $s0 		# Curent player location - BASE_ADDRESS to find how much they differ by
+	add $t1, $t1, $t2		# Add this difference to the address of the array index for the level
+	
+	lw $t3, 0($t1) 			# Load the background pixel
+	beq $t3, $t4, reset_bullet1	# If the background colour at this position equals the platform colour then there is a collision
+	
+	jr $ra
+	reset_bullet1:
+		lw $t5, locoriginalbullet1
+		sw $t5, locbullet1     # Bullet location changes to its starting position
+		
+		jr $ra
+		
+		
+bullet_collision2:
+	lw $t0, locbullet2 		# Bullet location
+	li $s0, BASE_ADDRESS
+	la $t1, level
+	
+	lw $t4, platformcolour
+	
+	addi $t0, $t0, -4		# Location we are checking
+	sub $t2, $t0, $s0 		# Curent player location - BASE_ADDRESS to find how much they differ by
+	add $t1, $t1, $t2		# Add this difference to the address of the array index for the level
+	
+	lw $t3, 0($t1) 			# Load the background pixel
+	beq $t3, $t4, reset_bullet2 	# If the background colour at this position equals the platform colour then there is a collision
+	
+	jr $ra
+	reset_bullet2:
+		lw $t5, locoriginalbullet2
+		sw $t5, locbullet2     # Bullet location changes to its starting position
+		
+		jr $ra
+	
 move_left:
     	jal check_collision_left 	# Check if its safe to move right
     	lw $t0, collision
@@ -323,7 +498,7 @@ jumping_state:
     	addi $t1, $t1, 1		# Increment jump frames
 	sw $t1, 0($t0)
 	
-	j game_loop
+	j update_enemy_state
 
 jumping:
 	jal erase_player      		# Erase current sprite by re-drawing the level background
@@ -337,7 +512,7 @@ jumping:
     	addi $t1, $t1, 1         	# Increment jump frames
 	sw $t1, 0($t0)
     	
-    	j game_loop
+    	j update_enemy_state
 
 update_player_state:
 	lw $t0, playerstate
@@ -347,7 +522,7 @@ update_player_state:
 	
 	jal check_collision_below	# Check if character is on a platform
 	lw $t1, collision
-	bnez $t1, game_loop 		# Character is standing
+	bnez $t1, update_enemy_state 		# Character is standing
 	
 	j change_fall_state		# If the character is not on a platform then change to falling state
 	
@@ -356,7 +531,7 @@ change_fall_state:
 		li $t1, 2
 		sw $t1, 0($t0)
 		
-		j game_loop
+		j update_enemy_state
 		
 change_stand_state:
 	la $t0, playerstate		# Update the player state to standing
@@ -371,7 +546,7 @@ change_stand_state:
     	li   $t1, 0
     	sw   $t1, 0($t0)
     	
-	j game_loop
+	j update_enemy_state
 	
 falling_state:
 	jal check_collision_below 	# Check if player is standing on a platform
@@ -387,7 +562,7 @@ fall:
     	sw $t7, curplayerlocation
     	jal draw_player
     	
-    	j game_loop
+    	j update_enemy_state
     
 abort_move:
     j update_player_state
@@ -398,18 +573,34 @@ keypress_happened:
 	beq $t2, 0x61, move_left 	# ASCII code of 'a' is 0x61, move left if pressed
 	beq $t2, 0x64, move_right 	# ASCII code of 'd' is 0x64, move right if pressed
 	beq $t2, 0x77, jump		# ASCII code of 'w' is 0x77, jump up if pressed
+	beq $t2, 0x71, quit		# ASCII code of 'q' is 0x71, quit the game if pressed
 	
 	j update_player_state
-
-
-draw_player: # NOTE set register with different sprites before calling to allow function to be used for any 8x8 enemy later maybe?
-	lw $s0, curplayerlocation
-	la $s1, player_sprite
+	
+	
+draw_shooter1:
+	lw $s6, shooterlocation1
+	la $s7, shooter_sprite
+	j draw_entity
+	
+draw_shooter2:
+	lw $s6, shooterlocation2
+	la $s7, shooter_sprite
+	j draw_entity
+	
+draw_player:
+	lw $s6, curplayerlocation
+	la $s7, player_sprite
+	j draw_entity
+	
+draw_entity: # NOTE set register with different sprites before calling to allow function to be used for any 8x8 enemy later maybe?
+	move $s0, $s6
+	move $s1, $s7
 	li $s4, 0x000000 		# BLACK
 	
 	li $s2, 8 			# Rows
 	row_loop:
-		beqz $s2, exit_draw_player
+		beqz $s2, exit_draw_entity
 		
 		li $s3, 8 		# Columns
 	col_loop:
@@ -433,11 +624,25 @@ draw_player: # NOTE set register with different sprites before calling to allow 
 		subi $s2, $s2, 1 	# Decrement Row counter
 		j row_loop
 		
-	exit_draw_player:
+	exit_draw_entity:
 		jr $ra
 		
-erase_player: # NOTE set register with different sprites before calling to allow function to be used for any 8x8 enemy later maybe?
-	lw $s0, curplayerlocation
+erase_shooter1:
+	lw $s6, shooterlocation1
+	j erase_entity
+	
+erase_shooter2:
+	lw $s6, shooterlocation2
+	j erase_entity
+	
+erase_player:
+	lw $s6, curplayerlocation
+	j erase_entity
+	
+
+		
+erase_entity: # NOTE set register with different sprites before calling to allow function to be used for any 8x8 enemy later maybe?
+	move $s0, $s6
 	li $t1, BASE_ADDRESS
 	la $t2, level
 	sub $t3, $s0, $t1 		# Curent player location - BASE_ADDRESS to find how much they differ by
@@ -445,7 +650,7 @@ erase_player: # NOTE set register with different sprites before calling to allow
 	
 	li $s1, 8 			# Rows
 	erase_row:
-		beqz $s1, exit_erase_player
+		beqz $s1, exit_erase_entity
 		
 		li $s2, 8 		# Columns
 	erase_col:
@@ -469,7 +674,7 @@ erase_player: # NOTE set register with different sprites before calling to allow
 		subi $s1, $s1, 1 	# Decrement Row counter
 		j erase_row
 		
-	exit_erase_player:
+	exit_erase_entity:
 		jr $ra
 	
 check_collision_left:
@@ -638,7 +843,45 @@ check_collision_above:
 		jr $ra 
 
 
-# Ends Program
-li $v0, 10
-syscall
+update_collisions:
+	lw $t0, curplayerlocation
+	addi $t0, $t0, 8		# Original sprite is off by 2 pixels
+	
+	lw $t4, bulletcolour
+	lw $t6, shootercolour
+	
+	li $s1, 8 			# Rows
+	update_row:
+		beqz $s1, exit_update_collisions
+		
+		li $s2, 5 		# Columns
+	update_col:
+		beqz $s2, row_updated
+		lw $t9, 0($t0)
+					# Comparisons
+		beq $t9, $t4, respawn	# Hit by bullet or falls in lava
+		beq $t9, $t6, respawn	# Touches the shooting enemy
+		
+		addi $t0, $t0, 4 	# Increment the location pixel
+		
+		subi $s2, $s2, 1 	# Decrement Column counter
+		j update_col
+		
+	row_updated:
+		li $t5, 64 		# Number of pixel units in a row
+		subi $t5, $t5, 5 	# Subtract the amount of pixels/ columns we checked
+		sll $t5, $t5, 2 	# Shift twice to multiply by 4 bytes per pixel
+
+		add $t0, $t0, $t5 	# Next Rows first pixel to check
+		
+		subi $s1, $s1, 1 	# Decrement Row counter
+		j update_row
+		
+	exit_update_collisions:
+		j game_loop
+	
+quit:
+	# Ends Program
+	li $v0, 10
+	syscall
 
