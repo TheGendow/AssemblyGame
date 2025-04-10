@@ -133,9 +133,17 @@ player_sprite: # 8 x 8 sprite
 ### GAME DATA
 .eqv BASE_ADDRESS 0x10008000
 .eqv MAX_PIXELS 4096
+.eqv OFFSET 256
+.eqv DEFAULT_FRAME_RATE 35
 
 curplayerlocation: .word 0x10008000
 spawnpoint: .word 0x1000B408 		# Player spawnpoint for each level
+platformcolour: .word 0x2B2B2B 		# Unique platform colour used for detection
+collision: .word 0
+jumpcount: .word 0
+playerstate: .word 0   			# 0: Standing state, 1: Jumping state, 2: Falling state
+jumpframes: .word 0
+
 .text
 .global main
 
@@ -168,40 +176,164 @@ make_level:
     		lw $t0, spawnpoint	# Load spawn point
     		sw $t0, curplayerlocation # Update current player location to spawnpoint
     		jal draw_player		# Draw the players character
-    		j movement_loop 	# Replace with game loop later
-
-
-# Temporary Movement loop before I add Game loop
-movement_loop:
+    		j game_loop 		# Replace with game loop later
+# GAME LOOP #
+game_loop:
     	li $t9, 0xffff0000 
     	lw $t8, 0($t9) 
     	beq $t8, 1, keypress_happened
+    	
+    	
+    	li $v0, 32 
+    	li $a0, DEFAULT_FRAME_RATE
+	syscall
+	
+	j update_player_state
     
-    	j movement_loop       		# If no valid key pressed, loop
-    
-    move_left:
+    	j game_loop       		# If no valid key pressed, loop
+   
+move_left:
+    	jal check_collision_left 	# Check if its safe to move right
+    	lw $t0, collision
+    	bnez $t0, abort_move
+    	
     	jal erase_player      		# Erase current sprite by re-drawing the level background
     	lw $t7, curplayerlocation
     	addi $t7, $t7, -4     		# Move left by 1 pixel (4 bytes)
     	sw $t7, curplayerlocation
     	jal draw_player       		# Draw sprite in the new location
-    	j movement_loop
     	
-    move_right:
+    	jal check_collision_left	# Check collision again to see if the character can move one more pixel
+    	lw $t0, collision
+    	bnez $t0, abort_move
+    	
+    	jal erase_player      		# Erase current sprite by re-drawing the level background
+    	lw $t7, curplayerlocation
+    	addi $t7, $t7, -4     		# Move left by 1 pixel (4 bytes)
+    	sw $t7, curplayerlocation
+    	jal draw_player			# Draw sprite in the new location
+    	
+    	j update_player_state
+    	
+move_right:
+    	jal check_collision_right	# Check if its safe to move right
+    	lw $t0, collision
+    	bnez $t0, abort_move
+    
     	jal erase_player		# Erase current sprite by re-drawing the level background
     	lw $t7, curplayerlocation
     	addi $t7, $t7, 4      		# Move right by 1 pixel (4 bytes)
     	sw $t7, curplayerlocation
     	jal draw_player			# Draw sprite in the new location
-    	j movement_loop
-  
+    	
+    	jal check_collision_right	# Check collision again to see if the character can move one more pixel
+    	lw $t0, collision
+    	bnez $t0, abort_move
+    	
+    	jal erase_player		# Erase current sprite by re-drawing the level background
+    	lw $t7, curplayerlocation
+    	addi $t7, $t7, 4      		# Move right by 1 pixel (4 bytes)
+    	sw $t7, curplayerlocation
+    	jal draw_player			# Draw sprite in the new location
+    	
+    	j update_player_state
+    	
+jump:
+    	jal check_collision_below 	# Check to see if charachter is touching the ground before trying to jump
+    	lw $t0, collision        
+    	beqz  $t0, abort_move
+    
+    	la $t0, playerstate		# Update the player state to jumping
+	li $t1, 1
+	sw $t1, 0($t0)
+	
+	j update_player_state
+		
+jumping_state:
+	# Check for collision above head if yes then start falling state (Add after I make platforms in the level) ##########################################
+	
+	lw $t1, jumpframes
+	bleu $t1, 7, jumping		# Move up 7 pixels maximum for a jump
+	beq $t1, 14, change_fall_state	# Dont change state untill another 7 frames so the character floats at the peak of jump for a bit
+	
+	la $t0, jumpframes		# Update the jump frames of the character
+    	lw $t1, jumpframes
+    	addi $t1, $t1, 1		# Increment jump frames
+	sw $t1, 0($t0)
+	
+	j game_loop
+
+jumping:
+	jal erase_player      		# Erase current sprite by re-drawing the level background
+    	lw $t7, curplayerlocation
+    	addi $t7, $t7, -OFFSET     	# Move up by one pixel as a jump
+    	sw $t7, curplayerlocation
+    	jal draw_player                 # Draw sprite in the new location
+    	
+    	la $t0, jumpframes		# Update the jump frames of the character
+    	lw $t1, jumpframes
+    	addi $t1, $t1, 1         	# Increment jump frames
+	sw $t1, 0($t0)
+    	
+    	j game_loop
+
+update_player_state:
+	lw $t0, playerstate
+
+	beq $t0, 1, jumping_state 	# Check if in jumpstate
+	beq $t0, 2, falling_state 	# Check if in fallstate
+	
+	jal check_collision_below	# Check if character is on a platform
+	lw $t1, collision
+	bnez $t1, game_loop 		# Character is standing
+	
+	j change_fall_state		# If the character is not on a platform then change to falling state
+	
+change_fall_state:
+		la $t0, playerstate	# Update the player state to falling
+		li $t1, 2
+		sw $t1, 0($t0)
+		
+		j game_loop
+		
+change_stand_state:
+	la $t0, playerstate		# Update the player state to standing
+	li $t1, 0
+	sw $t1, 0($t0)
+	
+	la $t0, jumpframes		# Update the jump frames of the character
+    	li $t1, 0
+	sw $t1, 0($t0)
+	
+	j game_loop
+	
+falling_state:
+	jal check_collision_below 	# Check if player is standing on a platform
+	lw $t0, collision
+    	bnez $t0, change_stand_state
+    	
+    	j fall				# If they are not on a platform then fall
+    	
+fall:
+	jal erase_player      		# Erase current sprite by re-drawing the level background
+    	lw $t7, curplayerlocation
+    	addi $t7, $t7, OFFSET     	# Move down by one pixel
+    	sw $t7, curplayerlocation
+    	jal draw_player
+    	
+    	j game_loop
+    
+abort_move:
+    j update_player_state
+	
 # Evaluate which key press happened
 keypress_happened:
 	lw $t2, 4($t9) 			# Assumes $t9 is set to 0xfff0000 from before 
 	beq $t2, 0x61, move_left 	# ASCII code of 'a' is 0x61, move left if pressed
-	beq $t2, 0x64, move_right 	# ASCII code of 'd' is 0x61, move right if pressed
+	beq $t2, 0x64, move_right 	# ASCII code of 'd' is 0x64, move right if pressed
+	beq $t2, 0x77, jump		# ASCII code of 'w' is 0x77, jump up if pressed
 	
-	jr $ra
+	j update_player_state
 
 
 draw_player: # NOTE set register with different sprites before calling to allow function to be used for any 8x8 enemy later maybe?
@@ -247,7 +379,7 @@ erase_player: # NOTE set register with different sprites before calling to allow
 	
 	li $s1, 8 			# Rows
 	erase_row:
-		beqz, $s1, exit_erase_player
+		beqz $s1, exit_erase_player
 		
 		li $s2, 8 		# Columns
 	erase_col:
@@ -274,7 +406,130 @@ erase_player: # NOTE set register with different sprites before calling to allow
 	exit_erase_player:
 		jr $ra
 	
+check_collision_left:
+	lw $t0, curplayerlocation
+	li $s0, BASE_ADDRESS
+	la $t1, level
 	
+	lw $t4, platformcolour
+	
+	addi $t0, $t0, 8		# Original sprite is off by 2 pixels
+	
+	addi $t0, $t0, -4		# Location we are checking
+	sub $t2, $t0, $s0 		# Curent player location - BASE_ADDRESS to find how much they differ by
+	add $t1, $t1, $t2		# Add this difference to the address of the array index for the level
+	
+	li $t8, 8 			# Row counter
+	collision_left_loop:
+		beqz $t8, no_collision_left
+		
+		lw $t3, 0($t1) 		# Load the background pixel
+		beq $t3, $t4, found_collision_left # If the background colour at this position equals the platform colour then there is a collision
+		
+		li $t5, OFFSET 		# Offset for my pixels
+		
+		add $t1, $t1, $t5 	# Find the next pixel to check by adding offset
+		
+		subi $t8, $t8, 1 	# Decrement Row counter
+		
+		j collision_left_loop
+		
+	no_collision_left:
+		la $s1, collision 	# Update the collision variable
+		li $s2, 0
+		sw $s2, 0($s1)
+		jr $ra
+	
+	found_collision_left:
+		la $s1, collision 	# Update the collision variable
+		li $s2, 1
+		sw $s2, 0($s1)
+		jr $ra 
+		 
+check_collision_right:
+	lw $t0, curplayerlocation
+	li $s0, BASE_ADDRESS
+	la $t1, level
+	
+	lw $t4, platformcolour
+	
+	addi $t0, $t0, 24		# The right side of my sprite
+	
+	addi $t0, $t0, 4		# Location we are checking
+	sub $t2, $t0, $s0 		# Curent player location - BASE_ADDRESS to find how much they differ by
+	add $t1, $t1, $t2		# Add this difference to the address of the array index for the level
+	
+	li $t8, 8 			# Row counter
+	collision_right_loop:
+		beqz $t8, no_collision_right
+		
+		lw $t3, 0($t1) 		# Load the background pixel
+		beq $t3, $t4, found_collision_right # If the background colour at this position equals the platform colour then there is a collision
+		
+		li $t5, OFFSET 		# Offset for my pixels
+	
+		add $t1, $t1, $t5	# Find the next pixel to check by adding offset
+		
+		subi $t8, $t8, 1 	# Decrement Row counter
+		
+		j collision_right_loop
+		
+	no_collision_right: 
+		la $s1, collision 	# Update the collision variable
+		li $s2, 0
+		sw $s2, 0($s1)
+		jr $ra
+	
+	found_collision_right:
+		la $s1, collision 	# Update the collision variable
+		li $s2, 1
+		sw $s2, 0($s1)
+		jr $ra 
+
+
+check_collision_below:
+	lw $t0, curplayerlocation
+	li $s0, BASE_ADDRESS
+	la $t1, level
+	
+	lw $t4, platformcolour
+	
+	addi $t0, $t0, 8		# The left side of my sprite
+	
+	li $t5, OFFSET 			# Offset for my pixels
+	
+	mul $t5, $t5, 8			# We need to move down by 8 pixels to reach the bottom of the sprite
+	
+	add $t0, $t0, $t5		# Adding this offset
+	
+	sub $t2, $t0, $s0 		# Curent player location - BASE_ADDRESS to find how much they differ by
+	add $t1, $t1, $t2		# Add this difference to the address of the array index for the level
+	
+	li $t8, 5
+	collision_below_loop:
+	
+		beqz $t8, no_collision_below
+		
+		lw $t3, 0($t1) 		# Load the background pixel
+		beq $t3, $t4, found_collision_below # If the background colour at this position equals the platform colour then there is a collision
+		
+		addi $t1, $t1, 4 	# Move one pixel to the right
+		
+		subi $t8, $t8, 1 	# Decrement Row counter
+		
+		j collision_below_loop
+	
+	no_collision_below:
+		la $s1, collision 	# Update the collision variable
+		li $s2, 0
+		sw $s2, 0($s1)
+		jr $ra
+	found_collision_below:
+		la $s1, collision 	# Update the collision variable
+		li $s2, 1
+		sw $s2, 0($s1)
+		jr $ra 
+
 # Ends Program
 li $v0, 10
 syscall
